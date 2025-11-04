@@ -1,3 +1,21 @@
 spring:
   application:
     name: petcare
+
+datasource:
+  url: jdbc:mysql://localhost:3306/petcare?useSSL=false&serverTimezone=UTC
+  username: root
+  password: password
+  driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+    devtools:
+      restart:
+        enabled: true
